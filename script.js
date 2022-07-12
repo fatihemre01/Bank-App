@@ -47,8 +47,8 @@ function changeAccount(amount){
     `
 }
 
-// pick => Keeps the object array
-// selectedValue => Select index of the object array, 
+// "pick" => Keeps the object array
+// "selectedValue" => Select index of the object array, 
 // (it takes the value of the selected option)
 function loadHtml(pick){
     const selectedValue = document.getElementById("accountList").value
