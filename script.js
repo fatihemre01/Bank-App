@@ -13,14 +13,13 @@ class Bank{
     }
 
     deposit(value) {
-        let result = this.balance += value
-        return result
+        return this.balance += value
     }
 
     withdraw(value){
         if(value <= this.balance){
-            let result = this.balance -= value
-            return result
+            return this.balance -= value
+            
         }else{
             return "no enough money"
         }
@@ -37,18 +36,18 @@ changeAccount(accounts)
 
 // Creating dropdown menu
 // and pulls the data from objects to display dynamically
-function changeAccount(amount){
+function changeAccount(accounts){
     document.getElementById("selecter").innerHTML = `
     <select id="accountList" onchange="loadHtml(accounts)">
         <option>Choose an account</option>
-        <option value=0>${amount[0].name}</option>
-        <option value=1>${amount[1].name}</option>
+        <option value=0>${accounts[0].name}</option>
+        <option value=1>${accounts[1].name}</option>
     </select>
     `
 }
 
-// "pick" => Keeps the object array
-// "selectedValue" => Select index of the object array, 
+// pick => Keeps the object array
+// selectedValue => Select index of the object array, 
 // (it takes the value of the selected option)
 function loadHtml(pick){
     const selectedValue = document.getElementById("accountList").value
